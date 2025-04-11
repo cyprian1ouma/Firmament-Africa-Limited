@@ -14,8 +14,11 @@
     z-index: 99;
 }
 
-
-/*** Spinner ***/
+ body {
+    /* background: #121212;
+    color: #FFD700; */
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
 #spinner {
     opacity: 0;
     visibility: hidden;
