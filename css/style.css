@@ -77,7 +77,7 @@
 /*** Navbar ***/
 .nav-bar {
     position: relative;
-    margin-top: 45px;
+    margin-top: 10px;
     padding: 0 3rem;
     transition: .5s;
     z-index: 9999;
@@ -222,7 +222,7 @@
     align-items: center;
     justify-content: center;
     background: #0c0a0a !important;
-    border-radius: 50px;
+    border-radius: 5px;
     border: 1px dashed var(--primary) !important;
 }
 .icon img{
@@ -460,4 +460,124 @@
     margin-right: 0;
     padding-right: 0;
     border-right: none;
+}
+
+.product-img:hover {
+    transform: scale(1.1);
+    transition: .5s;
+}
+
+.cat-item .icon img {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+}
+
+/* Product image sizing */
+.property-item .position-relative {
+    height: 250px; 
+    overflow: hidden;
+}
+
+.property-item img.img-fluid {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease; 
+}
+
+/* Optional hover effect */
+.property-item:hover img.img-fluid {
+    transform: scale(1.05);
+}
+
+/* Ensure consistent card heights */
+.property-item {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.property-item .p-4 {
+    flex: 1;
+}
+
+/* Make all team images the same size */
+.team-item .position-relative {
+    height: 250px; /* Fixed height */
+    overflow: hidden; /* Hide overflow */
+}
+
+.team-item img.img-fluid {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Maintain aspect ratio while filling space */
+    display: block;
+}
+
+/* Make all product images the same size */
+.cat-item .icon {
+    height: 180px; /* Fixed height for image container */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cat-item .icon img {
+    width: auto;
+    max-width: 100%;
+    height: 100%;
+    object-fit: contain; /* Maintain aspect ratio */
+}
+
+/* Make navbar sticky/fixed */
+.nav-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Ensure content doesn't hide behind fixed navbar */
+body {
+    padding-top: 70px; /* Adjust based on your navbar height */
+}
+
+/* Mobile optimization */
+.navbar-toggler {
+    border-color: rgba(255, 193, 7, 0.5); /* Yellow border matching your theme */
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 193, 7, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* Ensure dropdowns are visible on mobile */
+@media (max-width: 991.98px) {
+    .navbar-collapse {
+        background-color: #343a40; /* Dark background for mobile menu */
+        padding: 15px;
+        margin-top: 10px;
+        border-radius: 5px;
+    }
+    
+    .dropdown-menu {
+        background-color: #495057; /* Slightly lighter than menu bg */
+    }
+    
+    .btn-warning {
+        margin-top: 10px;
+        display: flex !important;
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* Make sure logo doesn't shrink too much on mobile */
+@media (max-width: 576px) {
+    .navbar-brand .icon img {
+        width: 100px !important;
+    }
 }
